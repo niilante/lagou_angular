@@ -1,0 +1,23 @@
+{
+  "name": "webapp",
+  "authors": [
+    "dyzzi <1778720844@qq.com>"
+  ],
+  "description": "angularjs webapp",
+  "main": "",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#1.5.8"
+  }
+}
