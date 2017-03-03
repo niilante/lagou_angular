@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='app'>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>webapp</title>
+	<link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-	<p>Hello, Nice New World</p>
+	<div ui-view></div>
+	<script>
+		// 配置html字体大小移动端自适应
+		document.getElementsByTagName('html')[0].style.fontSize = window.screen.width / 10 +'px';
+	</script>
+	<script src='vendor/angular/angular.min.js' charset='utf-8'></script>
+	<script src='vendor/angular-ui-router/release/angular-ui-router.min.js' charset='utf-8'></script>
+	<script src='js/index.js'></script>
 </body>
 </html>

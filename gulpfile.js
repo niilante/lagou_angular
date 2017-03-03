@@ -41,6 +41,7 @@ gulp.task('less', function(){
 
 gulp.task('js', function(){
 	gulp.src(app.srcPath + 'script/**/*.js')
+		// 压缩为index.js
 		.pipe($.concat('index.js'))
 		.pipe(gulp.dest(app.devPath + 'js'))
 		.pipe($.uglify())
@@ -79,7 +80,7 @@ gulp.task('serve', ['build'], function(){
 	gulp.watch('bower_components/**/*', ['lib']);
 	gulp.watch(app.srcPath + '**/*.html', ['html']);
 	gulp.watch(app.srcPath + 'data/**/*.json', ['json']);
-	gulp.watch(app.srcPath + 'style/index.less', ['less']);
+	gulp.watch(app.srcPath + 'style/**/*.less', ['less']);
 	gulp.watch(app.srcPath + 'script/**/*.js', ['js']);
 	gulp.watch(app.srcPath + 'image/**/*', ['image']);
 });
