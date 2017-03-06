@@ -1,13 +1,21 @@
-<ul class="position-list">
-    <li class="item">
-    	<img class="logo" src="" alt="">
+<ul class="bg-w position-list">
+    <!-- <li class="item">
+    	<img class="logo f-l" src="image/company-3.png" alt="">
         <h3 class="title">
-			销售	
-		</h3>
-		<p class="text">
-			鹅厂[上海] 互联网<br>
-			2016-06-01 11:05
-		</p>
+    			销售	
+    		</h3>
+    		<p class="text">
+    			鹅厂[上海] 互联网<br>
+    			2016-06-01 11:05
+    		</p>
         </img>
-    </li>
+    </li> -->
+    <li ui-sref="position({id:item.id})" class="item" ng-repeat="item in data">
+    <img class="logo f-l" ng-src="{{item.imageSrc}}" alt="">
+        <h3 class="title" ng-bind="item.name">
+    		</h3>
+    		<p class="text" ng-bind="item.companyName + '[' + item.city + ']' + ' ' + item.industry">
+    		</p>
+    		<p class="text" ng-bind="item.time"></p>
+        </img></li>
 </ul>
